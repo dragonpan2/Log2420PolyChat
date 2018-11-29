@@ -1,0 +1,110 @@
+ <!DOCTYPE html>
+<html>
+<head>
+        <link href="main.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>TD2 Equipe 18</title>
+</head>
+<body>
+
+    <div class="logo">
+        <a  href="index.html">
+            <img src="Images/PolyChat.png" class="imageLogo">
+        </a>
+        <div id="loading"></div>
+    </div>
+    <div class="entete">
+
+        <div class="iconeEntete">
+		 <div style="position: absolute;">
+                <input type="button" id="mute">
+            <i class="fas fa-cog"></i>
+			<div id="notifsSon">Son</div>
+			</div>
+        </div>
+        <div class="iconeEntete">
+            <div style="position: absolute;">
+                <input type="button" id="switchLanguage">
+                <i class="fas fa-globe"></i>
+				<div id="notifsLangue">Français</div>
+            </div>
+        </div>
+        <div class="iconeEntete">
+            <div class ="username">
+                <i class="far fa-bell" ></i>
+                <div id="notifs"></div>
+            </div>
+        </div>
+        <div class="iconeEntete">
+            <div class ="username">
+                <input type="button" id="switchUsername">
+                <i class="fas fa-user"></i>
+                <div id="usernameName"></div>
+            </div>
+            <div id="inputUsernameContainer">
+                <input type="text" id="usernameInputText" placeholder="Entrer un nom">
+                <input type="button" id="butU" value="Définir nom">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="messagerie">
+        <div class="enteteMessagerie">
+            <div class="enteteMessagerieGroupes">
+                <div class="blocTexteEnteteGroupes">
+                    <div id="groupList" class="texteEntete">Liste des groupes</div>
+                    <div id="groupDisp" class="texteEntete" style="font-size:20px;">Groupes disponibles:</div>
+                </div>
+                <div id="inputChaineContainer">
+                    <input type="text" id="chaineInputText" placeholder="Nom de la nouvelle chaine...">
+                    <div>
+                        <input type="button" id="butC" value="Ajouter la chaine">
+                    </div>
+                </div>
+                <div class="iconeEnteteGroupes">
+                    <input type="button" id="plusChaine">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="iconeEnteteGroupes">
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+            <div class="enteteMessagerieMessages">
+                <div id = "groupActif" class="texteEntete" style="padding-top:15px;">Groupe actif:</div>
+                <div id="txtPresentChannel"></div>
+            </div> 
+        </div>
+    </div>
+
+    <div class="messagesGroupes">
+        <div class="boiteMessages" >
+            <div class="barreInput">
+                <div class="barreInputPos">
+                    <i class="far fa-thumbs-up"id="pouce"></i>
+                    <input type="text" id="tex" placeholder="Entrez votre message">
+                    <div id="envoyer" class="envoyer">
+                        Envoyer
+                        <input type="button" id="but" >
+                    </div>
+                </div>
+            </div>
+            <div id="msg-box-container"></div>
+        </div>
+        <div class="boiteGroupes" id="groupes"></div>
+    </div>
+    
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <script src="channel.js"></script>
+    <script src="channelsObserver.js"></script>
+    <script src="connectionHandler.js"></script>
+    <script src="message.js"></script>
+    <script src="messagesObserver.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
